@@ -7,12 +7,9 @@ public class Launcher {
         Scanner KeybordInput = new Scanner(System.in);
 
         String command = KeybordInput.nextLine();
-        if(command.equals("quit")){
-            return;
-        }
-        else{
+        while (!command.equals("quit")){
             System.out.println("Unknow command");
-            return;
+            command = KeybordInput.nextLine();
         }
     }
 }
