@@ -46,6 +46,8 @@ public class Launcher {
             try {
                 String test = Files.readString(fichier);
                 test = test.toLowerCase();
+                test = test.replaceAll("\\p{Punct}", "");
+                test = test.replaceAll("( +)"," ").trim();
                 Scanner scanner = new Scanner(test);
                 while(scanner.hasNextLine()) {
                     test = scanner.nextLine();
